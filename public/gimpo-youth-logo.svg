@@ -1,0 +1,18 @@
+<svg width="240" height="108" viewBox="0 0 240 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="108" rx="18" fill="white"/>
+  <g transform="translate(84,8)">
+    <circle cx="28" cy="24" r="19" fill="#FFF7EF" stroke="#3B342E" stroke-width="3"/>
+    <path d="M14 25C18 20 23 18 28 18C33 18 38 20 42 25" stroke="#3B342E" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="21.5" cy="25" r="2.3" fill="#3B342E"/>
+    <circle cx="34.5" cy="25" r="2.3" fill="#3B342E"/>
+    <path d="M25 34C26.5 35.2 29.5 35.2 31 34" stroke="#3B342E" stroke-width="3" stroke-linecap="round"/>
+    <path d="M24 9C21 3 15 2 11 4" stroke="#3B342E" stroke-width="3" stroke-linecap="round"/>
+    <path d="M32 9C35 3 41 2 45 4" stroke="#3B342E" stroke-width="3" stroke-linecap="round"/>
+    <path d="M48 9C50.5 5.5 56 5.5 58.5 9C61 12.5 59 17 54 17C49 17 47 12.5 48 9Z" fill="#E5553F"/>
+    <path d="M53.5 4C52 0.8 48.8 0.3 46.5 1.6" stroke="#5F8550" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="61.5" cy="12.5" r="6.5" fill="#F1B45B"/>
+    <path d="M61.5 6C59.5 4.5 57.8 3.8 56 3.9" stroke="#5F8550" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+  <text x="22" y="83" fill="#2F2A26" font-size="46" font-weight="700" font-family="'Nanum Myeongjo', serif" letter-spacing="-2">김포</text>
+  <text x="112" y="83" fill="#E5553F" font-size="46" font-weight="700" font-family="'Nanum Myeongjo', serif" letter-spacing="-2">청년몰</text>
+</svg>
