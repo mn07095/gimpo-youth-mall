@@ -6,10 +6,12 @@ import { useState } from "react";
 import type { Product } from "@/data/products";
 
 import { useCart } from "@/components/providers/CartProvider";
+import { useSite } from "@/components/providers/SiteProvider";
 
 export function ProductPurchasePanel({ product }: { product: Product }) {
   const router = useRouter();
   const { addItem } = useCart();
+  const { isLoggedIn } = useSite();
   const [selectedOption, setSelectedOption] = useState(product.options[0]?.label ?? "");
   const [quantity, setQuantity] = useState(1);
 
@@ -27,6 +29,11 @@ export function ProductPurchasePanel({ product }: { product: Product }) {
   };
 
   const handleBuyNow = () => {
+    if (!isLoggedIn) {
+      router.push("/login?redirect=/checkout");
+      return;
+    }
+
     addToCart();
     router.push("/checkout");
   };

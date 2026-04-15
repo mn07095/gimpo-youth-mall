@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 import { getCartDisplayItems, useCart } from "@/components/providers/CartProvider";
+import { useSite } from "@/components/providers/SiteProvider";
 
 type DemoOrder = {
   id: string;
@@ -25,14 +27,35 @@ const ORDER_STORAGE_KEY = "gimpo-youth-mall-orders";
 export function CheckoutView() {
   const router = useRouter();
   const { items, clearCart } = useCart();
+  const { isLoggedIn, userName } = useSite();
   const displayItems = getCartDisplayItems(items);
   const subtotal = displayItems.reduce((sum, item) => sum + item.totalPrice, 0);
   const shipping = displayItems.length > 0 && subtotal < 30000 ? 3000 : 0;
   const total = subtotal + shipping;
 
-  const [recipientName, setRecipientName] = useState("김포 청년");
+  const [recipientName, setRecipientName] = useState(userName || "김포청년몰");
   const [address, setAddress] = useState("경기도 김포시 청년로 12");
   const [detailAddress, setDetailAddress] = useState("101동 1203호");
+
+  if (!isLoggedIn) {
+    return (
+      <div className="container auth-shell">
+        <section className="form-card auth-card">
+          <span className="eyebrow">로그인 필요</span>
+          <h1>주문하려면 먼저 로그인해주세요</h1>
+          <p className="auth-helper">로그인 후 장바구니와 주문 정보를 이어서 확인할 수 있어요.</p>
+          <div className="auth-actions">
+            <Link href="/login?redirect=/checkout" className="button">
+              로그인하기
+            </Link>
+            <Link href="/signup" className="button button-outline">
+              회원가입
+            </Link>
+          </div>
+        </section>
+      </div>
+    );
+  }
 
   const handlePlaceOrder = () => {
     if (displayItems.length === 0) {

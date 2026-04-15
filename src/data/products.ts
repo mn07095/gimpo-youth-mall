@@ -53,8 +53,8 @@ export const products: Product[] = [
     description: "유통 단계를 줄여 신선하게 받아보는 김포청년몰 대표 햇사과입니다.",
     image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=1200&q=80",
     detailImages: [
-      "https://images.unsplash.com/photo-1570913149827-d2ac84ab3f9a?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1569870499705-504209102861?auto=format&fit=crop&w=1400&q=80",
     ],
     options: [
       { label: "3kg 가정용", price: 23900 },
@@ -87,8 +87,8 @@ export const products: Product[] = [
     description: "김포 인근 산지에서 선별한 배를 과즙감 살려 바로 보내드립니다.",
     image: "https://images.unsplash.com/photo-1514756331096-242fdeb70d4a?auto=format&fit=crop&w=1200&q=80",
     detailImages: [
-      "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1574226516831-e1dff420e37f?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1519096845289-95806ee03a1a?auto=format&fit=crop&w=1400&q=80",
     ],
     options: [
       { label: "3kg 실속형", price: 27900 },
@@ -120,8 +120,8 @@ export const products: Product[] = [
     description: "간식처럼 먹기 좋은 방울토마토로, 신선도를 살려 빠르게 보내드립니다.",
     image: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=1200&q=80",
     detailImages: [
-      "https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1546470427-e5f5a39c76a7?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1518977822534-7049a61ee0c2?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1592841200221-a6898f307baa?auto=format&fit=crop&w=1400&q=80",
     ],
     options: [
       { label: "1kg", price: 12900 },
@@ -152,8 +152,8 @@ export const products: Product[] = [
     description: "제철 감귤만 모아 균일한 당도와 상큼함을 담은 구성입니다.",
     image: "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=1200&q=80",
     detailImages: [
-      "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1605027990121-cbae9e0642df?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1612198790700-0ff08cb726e5?auto=format&fit=crop&w=1400&q=80",
     ],
     options: [
       { label: "3kg", price: 18900 },
@@ -184,8 +184,8 @@ export const products: Product[] = [
     description: "당도 높은 설향 딸기를 선별해 바로 보내드리는 시즌 인기 상품입니다.",
     image: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=1200&q=80",
     detailImages: [
-      "https://images.unsplash.com/photo-1518635017480-e6e0f9d6cfc6?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1519996529931-28324d5a630e?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1543528176-61b239494933?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1518635017498-87f514b751ba?auto=format&fit=crop&w=1400&q=80",
     ],
     options: [
       { label: "750g", price: 19900 },
@@ -216,8 +216,8 @@ export const products: Product[] = [
     description: "입안 가득 퍼지는 향과 높은 당도로 선물용 문의가 많은 포도입니다.",
     image: "https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=1200&q=80",
     detailImages: [
-      "https://images.unsplash.com/photo-1599819171440-5a3f53f07b36?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1515778767554-7a823a49267f?auto=format&fit=crop&w=1400&q=80",
     ],
     options: [
       { label: "2kg", price: 24900 },
@@ -248,8 +248,8 @@ export const products: Product[] = [
     description: "잘 익은 과육과 은은한 향을 즐기기 좋은 시즌 과일입니다.",
     image: "https://images.unsplash.com/photo-1571575173700-afb9492e6a50?auto=format&fit=crop&w=1200&q=80",
     detailImages: [
-      "https://images.unsplash.com/photo-1622662053379-21be654f2f6f?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1571212515416-fca88d73b7cf?auto=format&fit=crop&w=1400&q=80",
     ],
     options: [
       { label: "2수", price: 22900 },
@@ -278,10 +278,10 @@ export const products: Product[] = [
     badge: "여름 인기",
     summary: "달콤한 향과 과즙이 풍부한 백도 복숭아",
     description: "은은한 향과 부드러운 과육으로 여름철 인기가 많은 복숭아입니다.",
-    image: "https://images.unsplash.com/photo-1629828874514-2f0d6f2cbf5f?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1595743825637-cdafc8ad4173?auto=format&fit=crop&w=1200&q=80",
     detailImages: [
-      "https://images.unsplash.com/photo-1595743825637-cdafc8ad4173?auto=format&fit=crop&w=1400&q=80",
       "https://images.unsplash.com/photo-1629828874514-2f0d6f2cbf5f?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1570978561297-1d9f93f5f5c1?auto=format&fit=crop&w=1400&q=80",
     ],
     options: [
       { label: "2kg", price: 21900 },

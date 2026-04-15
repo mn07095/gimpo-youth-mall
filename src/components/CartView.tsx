@@ -1,15 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import { getCartDisplayItems, useCart } from "@/components/providers/CartProvider";
+import { useSite } from "@/components/providers/SiteProvider";
 
 export function CartView() {
+  const router = useRouter();
   const { items, updateQuantity, removeItem } = useCart();
+  const { isLoggedIn } = useSite();
   const displayItems = getCartDisplayItems(items);
   const subtotal = displayItems.reduce((sum, item) => sum + item.totalPrice, 0);
   const shipping = displayItems.length > 0 && subtotal < 30000 ? 3000 : 0;
   const total = subtotal + shipping;
+
+  const handleCheckout = () => {
+    if (displayItems.length === 0) return;
+    if (!isLoggedIn) {
+      router.push("/login?redirect=/checkout");
+      return;
+    }
+    router.push("/checkout");
+  };
 
   return (
     <div className="container content-grid cart-layout">
@@ -97,9 +110,9 @@ export function CartView() {
           <Link href="/products" className="button button-outline">
             계속 쇼핑
           </Link>
-          <Link href="/checkout" className={`button${displayItems.length === 0 ? " button-disabled" : ""}`}>
+          <button type="button" className={`button${displayItems.length === 0 ? " button-disabled" : ""}`} onClick={handleCheckout}>
             주문하기
-          </Link>
+          </button>
         </div>
       </aside>
     </div>

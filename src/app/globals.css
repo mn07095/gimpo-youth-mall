@@ -183,6 +183,47 @@ textarea {
   cursor: pointer;
 }
 
+.account-dropdown {
+  position: relative;
+}
+
+.account-dropdown-trigger {
+  min-width: 110px;
+  justify-content: center;
+}
+
+.account-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 160px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: var(--shadow);
+  z-index: 30;
+}
+
+.account-dropdown-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 42px;
+  padding: 0 0.95rem;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  color: var(--brown);
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.account-dropdown-menu .account-dropdown-item:last-child {
+  border-bottom: 0;
+}
+
+.account-dropdown-item:hover {
+  background: #f7f2e8;
+}
+
 .mobile-quick-bar {
   display: none;
 }
@@ -1434,6 +1475,38 @@ textarea {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.auth-shell {
+  max-width: 760px;
+}
+
+.auth-card {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.auth-card-wide {
+  max-width: 760px;
+}
+
+.auth-helper {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.auth-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.form-error {
+  margin: 0;
+  color: var(--red);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .inline-list {
   display: flex;
   flex-wrap: wrap;
@@ -1553,6 +1626,11 @@ textarea {
 }
 
 @media (max-width: 960px) {
+  .site-header {
+    position: static;
+    backdrop-filter: none;
+  }
+
   .store-header {
     padding-top: 0.3rem;
   }

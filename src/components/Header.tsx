@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 import { useCart } from "@/components/providers/CartProvider";
 import { useSite } from "@/components/providers/SiteProvider";
@@ -20,6 +21,19 @@ const categories = [
 export function Header() {
   const { itemCount } = useCart();
   const { isLoggedIn, userName, todayVisits, totalVisits, logout, login } = useSite();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      if (!menuRef.current) return;
+      if (menuRef.current.contains(event.target as Node)) return;
+      setIsMenuOpen(false);
+    };
+
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
 
   return (
     <header className="site-header">
@@ -44,13 +58,44 @@ export function Header() {
                 장바구니{itemCount > 0 ? ` ${itemCount}` : ""}
               </Link>
               {isLoggedIn ? (
-                <button type="button" className="header-mini-link button-reset" onClick={logout}>
-                  {userName}님 ▾
-                </button>
+                <div className="account-dropdown" ref={menuRef}>
+                  <button
+                    type="button"
+                    className="header-mini-link account-dropdown-trigger button-reset"
+                    onClick={() => setIsMenuOpen((value) => !value)}
+                  >
+                    {userName}님 ▾
+                  </button>
+                  {isMenuOpen ? (
+                    <div className="account-dropdown-menu">
+                      <Link href="/mypage" className="account-dropdown-item" onClick={() => setIsMenuOpen(false)}>
+                        마이페이지
+                      </Link>
+                      <Link href="/mypage/profile" className="account-dropdown-item" onClick={() => setIsMenuOpen(false)}>
+                        회원정보수정
+                      </Link>
+                      <button
+                        type="button"
+                        className="account-dropdown-item button-reset"
+                        onClick={() => {
+                          logout();
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        로그아웃
+                      </button>
+                    </div>
+                  ) : null}
+                </div>
               ) : (
-                <button type="button" className="header-mini-link button-reset" onClick={login}>
-                  로그인
-                </button>
+                <>
+                  <Link href="/login" className="header-mini-link">
+                    로그인
+                  </Link>
+                  <Link href="/signup" className="header-mini-link">
+                    회원가입
+                  </Link>
+                </>
               )}
             </div>
           </div>
@@ -63,17 +108,17 @@ export function Header() {
           <Link href="/cart" className="mobile-quick-link">
             장바구니{itemCount > 0 ? ` ${itemCount}` : ""}
           </Link>
-          <Link href="/mypage" className="mobile-quick-link">
-            마이페이지
+          <Link href={isLoggedIn ? "/mypage" : "/login"} className="mobile-quick-link">
+            {isLoggedIn ? "마이페이지" : "로그인"}
           </Link>
           {isLoggedIn ? (
             <button type="button" className="mobile-quick-link button-reset" onClick={logout}>
               로그아웃
             </button>
           ) : (
-            <button type="button" className="mobile-quick-link button-reset" onClick={login}>
-              로그인
-            </button>
+            <Link href="/signup" className="mobile-quick-link">
+              회원가입
+            </Link>
           )}
         </div>
 
