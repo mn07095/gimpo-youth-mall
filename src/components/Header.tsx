@@ -56,6 +56,27 @@ export function Header() {
           </div>
         </div>
 
+        <div className="mobile-quick-bar">
+          <Link href="/products" className="mobile-quick-link">
+            상품
+          </Link>
+          <Link href="/cart" className="mobile-quick-link">
+            장바구니{itemCount > 0 ? ` ${itemCount}` : ""}
+          </Link>
+          <Link href="/mypage" className="mobile-quick-link">
+            마이페이지
+          </Link>
+          {isLoggedIn ? (
+            <button type="button" className="mobile-quick-link button-reset" onClick={logout}>
+              로그아웃
+            </button>
+          ) : (
+            <button type="button" className="mobile-quick-link button-reset" onClick={login}>
+              로그인
+            </button>
+          )}
+        </div>
+
         <nav className="store-nav" aria-label="스토어 메뉴">
           {categories.map((category) => (
             <Link key={category.label} href={category.href}>
